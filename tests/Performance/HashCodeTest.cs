@@ -1,9 +1,10 @@
-﻿using Microsoft.Xunit.Performance;
+﻿//using Microsoft.Xunit.Performance;
 
 namespace System.Numerics.Performance.Tests
 {
     public static class HashCodeTest
     {
+        /*
         [Benchmark(InnerIterationCount = 100000000)]
         public static void HashTest()
         {
@@ -25,5 +26,6 @@ namespace System.Numerics.Performance.Tests
                 }
             }
         }
+        */
     }
 }

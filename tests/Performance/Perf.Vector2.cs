@@ -2,7 +2,7 @@
 // The .NET Foundation licenses this file to you under the MIT license.
 // See the LICENSE file in the project root for more information.
 
-using Microsoft.Xunit.Performance;
+//using Microsoft.Xunit.Performance;
 using Xunit;
 using System.Collections.Generic;
 
@@ -16,6 +16,7 @@ namespace System.Numerics.Tests
                 yield return new object[] { op };
         }
 
+        /*
         [Benchmark]
         [MemberData(nameof(TestOperations))]
         public void Operation(Operations operation)
@@ -27,6 +28,7 @@ namespace System.Numerics.Tests
                 using (iteration.StartMeasurement())
                     ExecuteTest(operation, 1000000, v1, v2);
         }
+        */
 
         public void ExecuteTest(Operations operation, int innerIterations, Vector2 v1, Vector2 v2)
         {
