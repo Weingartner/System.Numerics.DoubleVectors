@@ -29,7 +29,7 @@
     <StartupObject />
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="..\..\src\System\DoubleNumerics\ConstantHelper.cs">
+    <Compile Include="..\..\src\ConstantHelper.cs">
       <Link>ConstantHelper.cs</Link>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -44,12 +44,6 @@
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
     <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\src\System.Numerics.DoubleVectors.csproj">
-      <Project>{53134b0c-0d57-481b-b84e-d1991e8d54ff}</Project>
-      <Name>System.Numerics.Vectors</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\src\System\Numerics\GenerationConfig.ttinclude">
@@ -78,11 +72,17 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="..\..\src\System\DoubleNumerics\ConstantHelper.tt">
+    <Content Include="..\..\src\ConstantHelper.tt">
       <Link>ConstantHelper.tt</Link>
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>ConstantHelper.cs</LastGenOutput>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\System.DoubleNumerics.csproj">
+      <Project>{BB116CA1-BA95-4DEF-9F2D-D09D50D088CC}</Project>
+      <Name>System.DoubleNumerics</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

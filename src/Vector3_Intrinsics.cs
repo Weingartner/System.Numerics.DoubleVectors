@@ -4,7 +4,7 @@
 
 using System.Runtime.CompilerServices;
 
-namespace System.Numerics.System.Numerics.Double
+namespace System.DoubleNumerics
 {
     // This file contains the definitions for all of the JIT intrinsic methods and properties that are recognized by the current x64 JIT compiler.
     // The implementation defined here is used in any circumstance where the JIT fails to recognize these members as intrinsic.
@@ -17,22 +17,22 @@ namespace System.Numerics.System.Numerics.Double
         /// <summary>
         /// The X component of the vector.
         /// </summary>
-        public global::System.Double X;
+        public Double X;
         /// <summary>
         /// The Y component of the vector.
         /// </summary>
-        public global::System.Double Y;
+        public Double Y;
         /// <summary>
         /// The Z component of the vector.
         /// </summary>
-        public global::System.Double Z;
+        public Double Z;
 
         #region Constructors
         /// <summary>
         /// Constructs a vector whose elements are all the single specified value.
         /// </summary>
         /// <param name="value">The element to fill the vector with.</param>
-        public Vector3(global::System.Double value) : this(value, value, value) { }
+        public Vector3(Double value) : this(value, value, value) { }
 
         /// <summary>
         /// Constructs a Vector3 from the given Vector2 and a third value.
@@ -47,7 +47,7 @@ namespace System.Numerics.System.Numerics.Double
         /// <param name="x">The X component.</param>
         /// <param name="y">The Y component.</param>
         /// <param name="z">The Z component.</param>
-        public Vector3(global::System.Double x, global::System.Double y, global::System.Double z)
+        public Vector3(Double x, Double y, Double z)
         {
             X = x;
             Y = y;
@@ -60,7 +60,7 @@ namespace System.Numerics.System.Numerics.Double
         /// Copies the contents of the vector into the given array.
         /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public void CopyTo(global::System.Double[] array)
+        public void CopyTo(Double[] array)
         {
             CopyTo(array, 0);
         }
@@ -73,7 +73,7 @@ namespace System.Numerics.System.Numerics.Double
         /// <exception cref="ArgumentOutOfRangeException">If index is greater than end of the array or index is less than zero.</exception>
         /// <exception cref="ArgumentException">If number of elements in source vector is greater than those available in destination array.</exception>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public void CopyTo(global::System.Double[] array, int index)
+        public void CopyTo(Double[] array, int index)
         {
             if (array == null)
             {
@@ -169,7 +169,7 @@ namespace System.Numerics.System.Numerics.Double
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static Vector3 SquareRoot(Vector3 value)
         {
-            return new Vector3((global::System.Double)Math.Sqrt(value.X), (global::System.Double)Math.Sqrt(value.Y), (global::System.Double)Math.Sqrt(value.Z));
+            return new Vector3((Double)Math.Sqrt(value.X), (Double)Math.Sqrt(value.Y), (Double)Math.Sqrt(value.Z));
         }
         #endregion Public Static Methods
 
@@ -217,7 +217,7 @@ namespace System.Numerics.System.Numerics.Double
         /// <param name="right">The scalar value.</param>
         /// <returns>The scaled vector.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static Vector3 operator *(Vector3 left, global::System.Double right)
+        public static Vector3 operator *(Vector3 left, Double right)
         {
             return left * new Vector3(right);
         }
@@ -229,7 +229,7 @@ namespace System.Numerics.System.Numerics.Double
         /// <param name="right">The source vector.</param>
         /// <returns>The scaled vector.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static Vector3 operator *(global::System.Double left, Vector3 right)
+        public static Vector3 operator *(Double left, Vector3 right)
         {
             return new Vector3(left) * right;
         }

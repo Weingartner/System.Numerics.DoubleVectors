@@ -2,12 +2,12 @@
 // The .NET Foundation licenses this file to you under the MIT license.
 // See the LICENSE file in the project root for more information.
 
+using Common.System.Numerics.Hashing;
 using System.Globalization;
-using System.Numerics.Common.System.Numerics.Hashing;
 using System.Runtime.CompilerServices;
 using System.Text;
 
-namespace System.Numerics.System.Numerics.Double
+namespace System.DoubleNumerics
 {
     /// <summary>
     /// A structure encapsulating three single precision floating point values and provides hardware accelerated methods.
@@ -359,7 +359,7 @@ namespace System.Numerics.System.Numerics.Double
         /// <param name="right">The scalar value.</param>
         /// <returns>The scaled vector.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static Vector3 Multiply(Vector3 left, global::System.Double right)
+        public static Vector3 Multiply(Vector3 left, Double right)
         {
             return left * right;
         }
@@ -371,7 +371,7 @@ namespace System.Numerics.System.Numerics.Double
         /// <param name="right">The source vector.</param>
         /// <returns>The scaled vector.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static Vector3 Multiply(global::System.Double left, Vector3 right)
+        public static Vector3 Multiply(Double left, Vector3 right)
         {
             return left * right;
         }
@@ -395,7 +395,7 @@ namespace System.Numerics.System.Numerics.Double
         /// <param name="divisor">The scalar value.</param>
         /// <returns>The result of the division.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static Vector3 Divide(Vector3 left, global::System.Double divisor)
+        public static Vector3 Divide(Vector3 left, Double divisor)
         {
             return left / divisor;
         }

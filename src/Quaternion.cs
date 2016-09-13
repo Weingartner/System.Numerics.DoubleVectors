@@ -4,7 +4,7 @@
 
 using System.Globalization;
 
-namespace System.Numerics.System.DoubleNumerics
+namespace System.DoubleNumerics
 {
     /// <summary>
     /// A structure encapsulating a four-dimensional vector (x,y,z,w), 

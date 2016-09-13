@@ -1,0 +1,10 @@
+{
+  "supports": {
+    "net46.app": {},
+    "uwp.10.0.app": {}
+  },
+  "dependencies": {},
+  "frameworks": {
+    ".NETStandard1.3": {}
+  }
+}

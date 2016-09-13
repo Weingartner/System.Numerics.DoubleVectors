@@ -28,7 +28,7 @@
     <StartupObject />
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="..\src\System\DoubleNumerics\ConstantHelper.cs">
+    <Compile Include="..\src\ConstantHelper.cs">
       <Link>ConstantHelper.cs</Link>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -84,17 +84,17 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\src\System.Numerics.DoubleVectors.csproj">
-      <Project>{53134b0c-0d57-481b-b84e-d1991e8d54ff}</Project>
-      <Name>System.Numerics.DoubleVectors</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="..\src\System\DoubleNumerics\ConstantHelper.tt">
+    <Content Include="..\src\ConstantHelper.tt">
       <Link>ConstantHelper.tt</Link>
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>ConstantHelper.cs</LastGenOutput>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\src\System.DoubleNumerics.csproj">
+      <Project>{bb116ca1-ba95-4def-9f2d-d09d50d088cc}</Project>
+      <Name>System.DoubleNumerics</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
