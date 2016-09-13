@@ -5,7 +5,7 @@
 using System.IO;
 using System.Runtime.CompilerServices;
 
-namespace System
+namespace System.Numerics.Performance.Tests.Common.System
 {
     /// <summary>Static helper class for performance tests</summary>
     public class PerfUtils

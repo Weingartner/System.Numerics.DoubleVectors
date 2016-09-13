@@ -3,6 +3,7 @@
 // See the LICENSE file in the project root for more information.
 
 using System.Globalization;
+using System.Numerics.System.DoubleNumerics;
 using System.Runtime.InteropServices;
 using Xunit;
 
@@ -133,7 +134,7 @@ namespace System.Numerics.Tests
             Vector3 a = new Vector3(1.0, 2.0, 3.0);
             Vector3 b = new Vector3(4.0, 5.0, 6.0);
 
-            double expected = (double)System.Math.Sqrt(27);
+            double expected = (double)Math.Sqrt(27);
             double actual;
 
             actual = Vector3.Distance(a, b);
@@ -208,7 +209,7 @@ namespace System.Numerics.Tests
 
             Vector3 target = new Vector3(a, z);
 
-            double expected = (double)System.Math.Sqrt(14.0);
+            double expected = (double)Math.Sqrt(14.0);
             double actual;
 
             actual = target.Length();

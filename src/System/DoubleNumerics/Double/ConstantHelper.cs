@@ -1,31 +1,13 @@
-﻿
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// Licensed to the .NET Foundation under one or more agreements.
+﻿// Licensed to the .NET Foundation under one or more agreements.
 // The .NET Foundation licenses this file to you under the MIT license.
 // See the LICENSE file in the project root for more information.
 
-
 using System.Runtime.CompilerServices;
 
-namespace System.Numerics
+namespace System.Numerics.Double
 {
     internal class ConstantHelper
     {
-
         [MethodImplAttribute(MethodImplOptions.AggressiveInlining)]
         public static Byte GetByteWithAllBitsSet()
         {
@@ -39,7 +21,6 @@ namespace System.Numerics
             }
             return value;
         }
-
         [MethodImplAttribute(MethodImplOptions.AggressiveInlining)]
         public static SByte GetSByteWithAllBitsSet()
         {
@@ -53,7 +34,6 @@ namespace System.Numerics
             }
             return value;
         }
-
         [MethodImplAttribute(MethodImplOptions.AggressiveInlining)]
         public static UInt16 GetUInt16WithAllBitsSet()
         {
@@ -67,7 +47,6 @@ namespace System.Numerics
             }
             return value;
         }
-
         [MethodImplAttribute(MethodImplOptions.AggressiveInlining)]
         public static Int16 GetInt16WithAllBitsSet()
         {
@@ -81,7 +60,6 @@ namespace System.Numerics
             }
             return value;
         }
-
         [MethodImplAttribute(MethodImplOptions.AggressiveInlining)]
         public static UInt32 GetUInt32WithAllBitsSet()
         {
@@ -95,7 +73,6 @@ namespace System.Numerics
             }
             return value;
         }
-
         [MethodImplAttribute(MethodImplOptions.AggressiveInlining)]
         public static Int32 GetInt32WithAllBitsSet()
         {
@@ -109,7 +86,6 @@ namespace System.Numerics
             }
             return value;
         }
-
         [MethodImplAttribute(MethodImplOptions.AggressiveInlining)]
         public static UInt64 GetUInt64WithAllBitsSet()
         {
@@ -123,7 +99,6 @@ namespace System.Numerics
             }
             return value;
         }
-
         [MethodImplAttribute(MethodImplOptions.AggressiveInlining)]
         public static Int64 GetInt64WithAllBitsSet()
         {
@@ -137,21 +112,6 @@ namespace System.Numerics
             }
             return value;
         }
-
-        [MethodImplAttribute(MethodImplOptions.AggressiveInlining)]
-        public static Double GetSingleWithAllBitsSet()
-        {
-            Double value = 0;
-            unsafe
-            {
-                unchecked
-                {
-                    *((Int32*)&value) = (Int32)0xffffffff;
-                }
-            }
-            return value;
-        }
-
         [MethodImplAttribute(MethodImplOptions.AggressiveInlining)]
         public static Double GetDoubleWithAllBitsSet()
         {
@@ -160,11 +120,23 @@ namespace System.Numerics
             {
                 unchecked
                 {
-                    *((Int64*)&value) = (Int64)0xffffffffffffffff;
+                    *((Int32*)&value) = (Int32)0xffffffffffffffff;
                 }
             }
             return value;
         }
-
+        [MethodImplAttribute(MethodImplOptions.AggressiveInlining)]
+        public static Double GetDoubleWithAllBitsSet()
+        {
+            Double value = 0;
+            unsafe
+            {
+                unchecked
+                {
+                    *((Int32*)&value) = (Int32)0xffffffffffffffff;
+                }
+            }
+            return value;
+        }
     }
 }

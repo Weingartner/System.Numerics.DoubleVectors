@@ -3,10 +3,11 @@
 // See the LICENSE file in the project root for more information.
 
 //using Microsoft.Xunit.Performance;
-using Xunit;
-using System.Collections.Generic;
 
-namespace System.Numerics.Tests
+using System.Collections.Generic;
+using System.Numerics.System.DoubleNumerics;
+
+namespace System.Numerics.Performance.Tests
 {
     public class Perf_Vector2
     {

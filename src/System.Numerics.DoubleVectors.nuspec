@@ -10,7 +10,7 @@
     <projectUrl>https://github.com/Weingartner/System.Numerics.DoubleVectors</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Copy of System.Numerics.Vectors except using double types</description>
-    <releaseNotes>Summary of changes made in this release of the package.</releaseNotes>
+    <releaseNotes>Moved into own namespace so as not to collide with System.Numerics</releaseNotes>
     <copyright>Copyright 2016</copyright>
     <tags>math numerics</tags>
   </metadata>

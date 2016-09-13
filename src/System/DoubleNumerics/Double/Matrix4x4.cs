@@ -4,7 +4,7 @@
 
 using System.Globalization;
 
-namespace System.Numerics
+namespace System.Numerics.System.Numerics.Double
 {
     /// <summary>
     /// A structure encapsulating a 4x4 matrix.

@@ -2,6 +2,7 @@
 // The .NET Foundation licenses this file to you under the MIT license.
 // See the LICENSE file in the project root for more information.
 
+using System.Numerics.System.DoubleNumerics;
 using System.Runtime.InteropServices;
 using Xunit;
 
@@ -70,7 +71,7 @@ namespace System.Numerics.Tests
             double t = 1.0 / detI;
 
             // only accurate to 3 precision
-            Assert.True(System.Math.Abs(detA - t) < 1e-3, "Matrix3x2.Determinant was not set correctly.");
+            Assert.True(Math.Abs(detA - t) < 1e-3, "Matrix3x2.Determinant was not set correctly.");
 
             // sanity check against 4x4 version
             Assert.Equal(new Matrix4x4(a).GetDeterminant(), detA);

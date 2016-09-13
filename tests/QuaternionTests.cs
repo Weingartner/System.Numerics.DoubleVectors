@@ -3,6 +3,7 @@
 // See the LICENSE file in the project root for more information.
 
 using System.Globalization;
+using System.Numerics.System.DoubleNumerics;
 using System.Runtime.InteropServices;
 using Xunit;
 
@@ -307,7 +308,7 @@ namespace System.Numerics.Tests
             Vector3 axis = new Vector3();
             double angle = MathHelper.ToRadians(-30.0);
 
-            double cos = (double)System.Math.Cos(angle / 2.0);
+            double cos = (double)Math.Cos(angle / 2.0);
             Quaternion actual = Quaternion.CreateFromAxisAngle(axis, angle);
 
             Assert.True(actual.X == 0.0 && actual.Y == 0.0 && actual.Z == 0.0 && MathHelper.Equal(cos, actual.W)

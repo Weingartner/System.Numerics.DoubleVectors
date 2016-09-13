@@ -3,11 +3,11 @@
 // See the LICENSE file in the project root for more information.
 
 using System.Globalization;
-using System.Numerics.Hashing;
+using System.Numerics.Common.System.Numerics.Hashing;
 using System.Runtime.CompilerServices;
 using System.Text;
 
-namespace System.Numerics
+namespace System.Numerics.System.Numerics.Double
 {
     /// <summary>
     /// A structure encapsulating three single precision floating point values and provides hardware accelerated methods.
@@ -114,7 +114,7 @@ namespace System.Numerics
         public double Length()
         {
             double ls = X * X + Y * Y + Z * Z;
-                return (double)System.Math.Sqrt(ls);
+                return (double)global::System.Math.Sqrt(ls);
         }
 
         /// <summary>
@@ -144,7 +144,7 @@ namespace System.Numerics
 
                 double ls = dx * dx + dy * dy + dz * dz;
 
-                return (double)System.Math.Sqrt((double)ls);
+                return (double)global::System.Math.Sqrt((double)ls);
         }
 
         /// <summary>
@@ -172,7 +172,7 @@ namespace System.Numerics
         public static Vector3 Normalize(Vector3 value)
         {
             double ls = value.X * value.X + value.Y * value.Y + value.Z * value.Z;
-                double length = (double)System.Math.Sqrt(ls);
+                double length = (double)global::System.Math.Sqrt(ls);
                 return new Vector3(value.X / length, value.Y / length, value.Z / length);
         }
 
@@ -359,7 +359,7 @@ namespace System.Numerics
         /// <param name="right">The scalar value.</param>
         /// <returns>The scaled vector.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static Vector3 Multiply(Vector3 left, Double right)
+        public static Vector3 Multiply(Vector3 left, global::System.Double right)
         {
             return left * right;
         }
@@ -371,7 +371,7 @@ namespace System.Numerics
         /// <param name="right">The source vector.</param>
         /// <returns>The scaled vector.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static Vector3 Multiply(Double left, Vector3 right)
+        public static Vector3 Multiply(global::System.Double left, Vector3 right)
         {
             return left * right;
         }
@@ -395,7 +395,7 @@ namespace System.Numerics
         /// <param name="divisor">The scalar value.</param>
         /// <returns>The result of the division.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static Vector3 Divide(Vector3 left, Double divisor)
+        public static Vector3 Divide(Vector3 left, global::System.Double divisor)
         {
             return left / divisor;
         }

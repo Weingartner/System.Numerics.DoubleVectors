@@ -3,6 +3,7 @@
 // See the LICENSE file in the project root for more information.
 
 using System.Globalization;
+using System.Numerics.System.DoubleNumerics;
 using System.Runtime.InteropServices;
 using Xunit;
 
@@ -97,7 +98,7 @@ namespace System.Numerics.Tests
             double t = 1.0 / detI;
 
             // only accurate to 3 precision
-            Assert.True(System.Math.Abs(detA - t) < 1e-3, "Matrix4x4.Determinant was not set correctly.");
+            Assert.True(Math.Abs(detA - t) < 1e-3, "Matrix4x4.Determinant was not set correctly.");
         }
 
         // A test for Invert (Matrix4x4)

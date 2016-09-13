@@ -3,6 +3,7 @@
 // See the LICENSE file in the project root for more information.
 
 using System.Globalization;
+using System.Numerics.System.DoubleNumerics;
 using System.Runtime.InteropServices;
 using Xunit;
 
@@ -181,7 +182,7 @@ namespace System.Numerics.Tests
 
             Vector4 target = new Vector4(a, w);
 
-            double expected = (double)System.Math.Sqrt(30.0);
+            double expected = (double)Math.Sqrt(30.0);
             double actual;
 
             actual = target.Length();

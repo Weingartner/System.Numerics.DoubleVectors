@@ -16,7 +16,7 @@
 
 using System.Runtime.CompilerServices;
 
-namespace System.Numerics
+namespace System.Numerics.Double
 {
     internal class ConstantHelper
     {

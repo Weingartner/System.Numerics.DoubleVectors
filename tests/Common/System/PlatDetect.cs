@@ -8,7 +8,7 @@ using System.Runtime.InteropServices;
 using System.Text;
 using Xunit;
 
-namespace System
+namespace System.Numerics.Tests.Common.System
 {
     public static class PlatformDetection
     {
@@ -82,11 +82,11 @@ namespace System
             {
                 foreach (string line in File.ReadLines("/etc/os-release"))
                 {
-                    if (line.StartsWith("ID=", System.StringComparison.Ordinal))
+                    if (line.StartsWith("ID=", global::System.StringComparison.Ordinal))
                     {
                         ret.Id = line.Substring("ID=".Length);
                     }
-                    else if (line.StartsWith("VERSION_ID=", System.StringComparison.Ordinal))
+                    else if (line.StartsWith("VERSION_ID=", global::System.StringComparison.Ordinal))
                     {
                         ret.VersionId = line.Substring("VERSION_ID=".Length);
                     }

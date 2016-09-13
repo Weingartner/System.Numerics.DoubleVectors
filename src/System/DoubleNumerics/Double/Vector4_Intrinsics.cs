@@ -4,7 +4,7 @@
 
 using System.Runtime.CompilerServices;
 
-namespace System.Numerics
+namespace System.Numerics.System.Numerics.Double
 {
     // This file contains the definitions for all of the JIT intrinsic methods and properties that are recognized by the current x64 JIT compiler.
     // The implementation defined here is used in any circumstance where the JIT fails to recognize these members as intrinsic.
@@ -16,19 +16,19 @@ namespace System.Numerics
         /// <summary>
         /// The X component of the vector.
         /// </summary>
-        public Double X;
+        public global::System.Double X;
         /// <summary>
         /// The Y component of the vector.
         /// </summary>
-        public Double Y;
+        public global::System.Double Y;
         /// <summary>
         /// The Z component of the vector.
         /// </summary>
-        public Double Z;
+        public global::System.Double Z;
         /// <summary>
         /// The W component of the vector.
         /// </summary>
-        public Double W;
+        public global::System.Double W;
 
         #region Constructors
 
@@ -36,7 +36,7 @@ namespace System.Numerics
         /// Constructs a vector whose elements are all the single specified value.
         /// </summary>
         /// <param name="value">The element to fill the vector with.</param>
-        public Vector4(Double value)
+        public Vector4(global::System.Double value)
             : this(value, value, value, value)
         {
         }
@@ -47,7 +47,7 @@ namespace System.Numerics
         /// <param name="x">X component.</param>
         /// <param name="y">Y component.</param>
         /// <param name="z">Z component.</param>
-        public Vector4(Double x, Double y, Double z, Double w)
+        public Vector4(global::System.Double x, global::System.Double y, global::System.Double z, global::System.Double w)
         {
             W = w;
             X = x;
@@ -61,7 +61,7 @@ namespace System.Numerics
         /// <param name="value">The vector to use as the X and Y components.</param>
         /// <param name="z">The Z component.</param>
         /// <param name="w">The W component.</param>
-        public Vector4(Vector2 value, Double z, Double w)
+        public Vector4(Vector2 value, global::System.Double z, global::System.Double w)
         {
             X = value.X;
             Y = value.Y;
@@ -74,7 +74,7 @@ namespace System.Numerics
         /// </summary>
         /// <param name="value">The vector to use as the X, Y, and Z components.</param>
         /// <param name="w">The W component.</param>
-        public Vector4(Vector3 value, Double w)
+        public Vector4(Vector3 value, global::System.Double w)
         {
             X = value.X;
             Y = value.Y;
@@ -88,7 +88,7 @@ namespace System.Numerics
         /// Copies the contents of the vector into the given array.
         /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public void CopyTo(Double[] array)
+        public void CopyTo(global::System.Double[] array)
         {
             CopyTo(array, 0);
         }
@@ -101,7 +101,7 @@ namespace System.Numerics
         /// <exception cref="ArgumentOutOfRangeException">If index is greater than end of the array or index is less than zero.</exception>
         /// <exception cref="ArgumentException">If number of elements in source vector is greater than those available in destination array.</exception>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public void CopyTo(Double[] array, int index)
+        public void CopyTo(global::System.Double[] array, int index)
         {
             if (array == null)
             {
@@ -203,7 +203,7 @@ namespace System.Numerics
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static Vector4 SquareRoot(Vector4 value)
         {
-            return new Vector4((Double)Math.Sqrt(value.X), (Double)Math.Sqrt(value.Y), (Double)Math.Sqrt(value.Z), (Double)Math.Sqrt(value.W));
+            return new Vector4((global::System.Double)Math.Sqrt(value.X), (global::System.Double)Math.Sqrt(value.Y), (global::System.Double)Math.Sqrt(value.Z), (global::System.Double)Math.Sqrt(value.W));
         }
         #endregion Public Static Methods
 
@@ -251,7 +251,7 @@ namespace System.Numerics
         /// <param name="right">The scalar value.</param>
         /// <returns>The scaled vector.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static Vector4 operator *(Vector4 left, Double right)
+        public static Vector4 operator *(Vector4 left, global::System.Double right)
         {
             return left * new Vector4(right);
         }
@@ -263,7 +263,7 @@ namespace System.Numerics
         /// <param name="right">The source vector.</param>
         /// <returns>The scaled vector.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static Vector4 operator *(Double left, Vector4 right)
+        public static Vector4 operator *(global::System.Double left, Vector4 right)
         {
             return new Vector4(left) * right;
         }

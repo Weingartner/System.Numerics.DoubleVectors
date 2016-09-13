@@ -5,7 +5,7 @@
 using System.Globalization;
 using System.Runtime.CompilerServices;
 
-namespace System.Numerics
+namespace System.Numerics.System.Numerics.Double
 {
     /// <summary>
     /// A structure encapsulating a 3D Plane
