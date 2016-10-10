@@ -3,6 +3,7 @@
 // See the LICENSE file in the project root for more information.
 
 using System.Globalization;
+using System.Text;
 
 namespace System.DoubleNumerics
 {
@@ -138,6 +139,17 @@ namespace System.DoubleNumerics
             result.M32 = yPosition;
 
             return result;
+        }
+        public string ToMultiLineString()
+        {
+            var ci = CultureInfo.CurrentCulture;
+
+            var sb = new StringBuilder();
+            sb.AppendLine($"{M11.ToString(ci),-19} {M12.ToString(ci),-19}");
+            sb.AppendLine($"{M21.ToString(ci),-19} {M22.ToString(ci),-19}");
+            sb.AppendLine($"{M31.ToString(ci),-19} {M32.ToString(ci),-19}");
+            sb.AppendLine($"{M11.ToString(ci),-19} {M12.ToString(ci),-19}");
+            return sb.ToString();
         }
 
         /// <summary>

@@ -19,7 +19,7 @@
   <Import Project="$(NuProjPath)\NuProj.props" Condition="Exists('$(NuProjPath)\NuProj.props')" />
   <PropertyGroup Label="Configuration">
     <Id>System.DoubleNumerics</Id>
-    <Version>3.0.0</Version>
+    <Version>3.0.1</Version>
     <Title>System.DoubleNumerics</Title>
     <Authors>weingartner machinen bau</Authors>
     <Owners>weingartner machinen bau</Owners>

@@ -3,6 +3,7 @@
 // See the LICENSE file in the project root for more information.
 
 using System.Globalization;
+using System.Text;
 
 namespace System.DoubleNumerics
 {
@@ -2196,6 +2197,18 @@ namespace System.DoubleNumerics
                                  M21.ToString(ci), M22.ToString(ci), M23.ToString(ci), M24.ToString(ci),
                                  M31.ToString(ci), M32.ToString(ci), M33.ToString(ci), M34.ToString(ci),
                                  M41.ToString(ci), M42.ToString(ci), M43.ToString(ci), M44.ToString(ci));
+        }
+        public string ToMultiLineString()
+        {
+            var ci = CultureInfo.CurrentCulture;
+
+
+            var sb = new StringBuilder();
+            sb.AppendLine($"{M11.ToString(ci),-19} {M12.ToString(ci),-19} {M13.ToString(ci),-19} {M14.ToString(ci),-19}");
+            sb.AppendLine($"{M21.ToString(ci),-19} {M22.ToString(ci),-19} {M23.ToString(ci),-19} {M24.ToString(ci),-19}");
+            sb.AppendLine($"{M31.ToString(ci),-19} {M32.ToString(ci),-19} {M33.ToString(ci),-19} {M34.ToString(ci),-19}");
+            sb.AppendLine($"{M11.ToString(ci),-19} {M12.ToString(ci),-19} {M13.ToString(ci),-19} {M14.ToString(ci),-19}");
+            return sb.ToString();
         }
 
         /// <summary>
