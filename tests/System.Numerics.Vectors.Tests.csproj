@@ -28,13 +28,8 @@
     <StartupObject />
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="..\src\ConstantHelper.cs">
-      <Link>ConstantHelper.cs</Link>
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ConstantHelper.tt</DependentUpon>
-    </Compile>
     <Compile Include="Common\System\PlatDetect.cs" />
+    <Compile Include="ConstantHelper.cs" />
     <Compile Include="Util.cs" />
     <Compile Include="Vector2Tests.cs" />
     <Compile Include="Vector3Tests.cs" />
@@ -84,15 +79,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="..\src\ConstantHelper.tt">
-      <Link>ConstantHelper.tt</Link>
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>ConstantHelper.cs</LastGenOutput>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\src\System.DoubleNumerics.csproj">
-      <Project>{bb116ca1-ba95-4def-9f2d-d09d50d088cc}</Project>
+    <ProjectReference Include="..\System.DoubleNumerics\System.DoubleNumerics.csproj">
+      <Project>{18483631-763c-48a4-9045-a3c3f93d23f9}</Project>
       <Name>System.DoubleNumerics</Name>
     </ProjectReference>
   </ItemGroup>

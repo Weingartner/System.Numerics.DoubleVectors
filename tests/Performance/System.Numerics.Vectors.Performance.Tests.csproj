@@ -29,13 +29,8 @@
     <StartupObject />
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="..\..\src\ConstantHelper.cs">
-      <Link>ConstantHelper.cs</Link>
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ConstantHelper.tt</DependentUpon>
-    </Compile>
     <Compile Include="Common\System\PerfUtils.cs" />
+    <Compile Include="ConstantHelper.cs" />
     <Compile Include="HashCodeTest.cs" />
     <Compile Include="Perf.Vector2.cs" />
     <Compile Include="Perf.Vector3.cs" />
@@ -72,15 +67,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="..\..\src\ConstantHelper.tt">
-      <Link>ConstantHelper.tt</Link>
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>ConstantHelper.cs</LastGenOutput>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\src\System.DoubleNumerics.csproj">
-      <Project>{BB116CA1-BA95-4DEF-9F2D-D09D50D088CC}</Project>
+    <ProjectReference Include="..\..\System.DoubleNumerics\System.DoubleNumerics.csproj">
+      <Project>{18483631-763c-48a4-9045-a3c3f93d23f9}</Project>
       <Name>System.DoubleNumerics</Name>
     </ProjectReference>
   </ItemGroup>
