@@ -148,7 +148,6 @@ namespace System.DoubleNumerics
             sb.AppendLine($"{M11.ToString(ci),-19} {M12.ToString(ci),-19}");
             sb.AppendLine($"{M21.ToString(ci),-19} {M22.ToString(ci),-19}");
             sb.AppendLine($"{M31.ToString(ci),-19} {M32.ToString(ci),-19}");
-            sb.AppendLine($"{M11.ToString(ci),-19} {M12.ToString(ci),-19}");
             return sb.ToString();
         }
 

@@ -2207,7 +2207,7 @@ namespace System.DoubleNumerics
             sb.AppendLine($"{M11.ToString(ci),-19} {M12.ToString(ci),-19} {M13.ToString(ci),-19} {M14.ToString(ci),-19}");
             sb.AppendLine($"{M21.ToString(ci),-19} {M22.ToString(ci),-19} {M23.ToString(ci),-19} {M24.ToString(ci),-19}");
             sb.AppendLine($"{M31.ToString(ci),-19} {M32.ToString(ci),-19} {M33.ToString(ci),-19} {M34.ToString(ci),-19}");
-            sb.AppendLine($"{M11.ToString(ci),-19} {M12.ToString(ci),-19} {M13.ToString(ci),-19} {M14.ToString(ci),-19}");
+            sb.AppendLine($"{M41.ToString(ci),-19} {M42.ToString(ci),-19} {M43.ToString(ci),-19} {M44.ToString(ci),-19}");
             return sb.ToString();
         }
 
